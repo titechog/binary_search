@@ -13,6 +13,9 @@ int main(){
   scanf("%d%d", &n, &k);
     lb = 0;
     ub = n;
+    for(i = 0; i < n; i++){
+        scanf("%d", &A[i]);
+    }
     while(ub - lb > 1){
         int m = (lb + ub) / 2;
         if(p(m)){
@@ -22,9 +25,8 @@ int main(){
             lb = m;
         }
     }
-    printf("%d\n", ub);
-  for(i = 0; i < n; i++){
-    scanf("%d", &A[i]);
-  }
+         printf("%d\n", ub);
+   
+    
   return 0;
 }
